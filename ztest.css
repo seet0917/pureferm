@@ -1,0 +1,86 @@
+/* 全局基础样式 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", sans-serif; color: #333; overflow-x: hidden; }
+
+/* 导航栏固定 */
+.navbar {
+    position: fixed; top: 0; width: 100%; height: 80px;
+    background: #fff; display: flex; justify-content: space-between;
+    align-items: center; padding: 0 4%; z-index: 2000;
+}
+
+/* 1:1 汉堡图标 */
+.burger-menu { width: 26px; height: 18px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
+.burger-menu span, .burger-menu::before, .burger-menu::after { content: ""; width: 100%; height: 2px; background: #333; }
+
+/* --- 下拉全屏菜单 --- */
+.overlay {
+    position: fixed; top: -100%; left: 0; width: 100%; height: 100vh;
+    background: #000; color: #fff; z-index: 1500;
+    transition: top 0.5s ease-in-out; /* 由上往下动画 */
+    padding: 120px 10%;
+}
+.overlay.open { top: 0; } /* 点击后显示 */
+
+.overlay-content { display: flex; gap: 100px; }
+.menu-list ul { list-style: none; }
+.menu-list li { font-size: 24px; padding: 15px 0; color: #888; cursor: pointer; border-bottom: 1px solid #333; }
+.menu-list li span { font-size: 14px; vertical-align: super; margin-left: 5px; }
+.menu-list li.active { color: #fff; border-bottom: 2px solid #fff; }
+
+.menu-sub li { list-style: none; color: #888; padding: 10px 0; }
+.menu-social { position: absolute; bottom: 50px; left: 10; display: flex; gap: 15px; }
+.social-icon { background: #333; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+
+/* --- 按钮 Hover 效果：重点还原 --- */
+.btn-more, .link-more {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #8b2d1f;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #8b2d1f;
+    transition: 0.4s; /* 平滑变化 */
+}
+
+/* 滑鼠指着的时候变化：变红底白字 */
+.btn-more:hover, .link-more:hover {
+    background-color: #8b2d1f;
+    color: #fff;
+    transform: translateY(-2px); /* 轻微上浮感 */
+}
+
+/* --- 双卡片布局 --- */
+.section { padding: 80px 5%; text-align: center; }
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* 两个卡片的间距 */
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: #f9f9f9;
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.product-info { flex: 1; }
+.product-info h4 { font-size: 24px; margin: 10px 0; }
+.product-img { flex: 1; }
+.product-img img { width: 100%; border-radius: 5px; }
+
+/* 顶部 Banner 文字 */
+.hero { padding-top: 100px; text-align: center; }
+.hero h1 { font-size: 48px; margin-bottom: 20px; }
+.hero-image img { width: 100%; display: block; margin-top: 50px; }
+
+/* 右侧图标 */
+.nav-icons { display: flex; gap: 20px; }
+.icon-btn { cursor: pointer; }

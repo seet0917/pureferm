@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联兴德创 - 1:1 还原</title>
+    <link rel="stylesheet" href="ztest.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="burger-menu" onclick="toggleMenu()">
+                <span></span>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="联兴德创">
+        </div>
+        <div class="nav-icons">
+            <div class="icon-btn search-btn">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <div class="icon-btn lang-btn">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+        </div>
+    </nav>
+
+    <div id="fullScreenMenu" class="overlay">
+        <div class="overlay-content">
+            <div class="menu-list">
+                <ul>
+                    <li>关于我们 <span>3</span></li>
+                    <li class="active">产品中心 <span>3</span></li>
+                    <li>技术研发 <span>3</span></li>
+                    <li>工程案例 <span>2</span></li>
+                    <li>适用原料 <span>6</span></li>
+                    <li>企业荣誉</li>
+                    <li>行业资讯</li>
+                    <li>联系我们 <span>2</span></li>
+                </ul>
+            </div>
+            <div class="menu-sub">
+                <ul>
+                    <li>核心产品 <span>3</span></li>
+                    <li>配套设备</li>
+                    <li>机械构件</li>
+                </ul>
+            </div>
+            <div class="menu-social">
+                <div class="social-icon">抖音</div>
+                <div class="social-icon">头条</div>
+                <div class="social-icon">小红书</div>
+                <div class="social-icon">官网</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>联兴德创<br>提供全方位的服务</h1>
+            <a href="#" class="btn-more">关于我们 →</a>
+        </div>
+        <div class="hero-image">
+            <img src="bg1.jpg" alt="背景图">
+        </div>
+    </section>
+
+    <section class="section team-intro">
+        <h2>专业设计团队</h2>
+        <h3>各类精密机加工设备</h3>
+        
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-info">
+                    <p>— Pellet Machine</p>
+                    <h4>颗粒机</h4>
+                    <a href="#" class="link-more">了解更多 →</a>
+                </div>
+                <div class="product-img">
+                    <img src="bg1.jpg" alt="产品">
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-info">
+                    <p>— Air Sorter</p>
+                    <h4>配套机械</h4>
+                    <a href="#" class="link-more">了解更多 →</a>
+                </div>
+                <div class="product-img">
+                    <img src="bg1.jpg" alt="产品">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('fullScreenMenu');
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
